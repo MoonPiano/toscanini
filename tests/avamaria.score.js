@@ -49,6 +49,16 @@ test("ava_maria_pg1 tests", (t) =>
     const expected = [{ beatType: 4, beats: 4 }];
     t.deepEqual(actual, expected, "getTimeSignatures");
   }
+  {
+    const actual = toscanini.getTitle();
+    const expected = "Ave Maria (Ellen's Gesang III) - Page 1";
+    t.equal(actual, expected, "getTitle");
+  }
+  {
+    const actual = toscanini.getComposer();
+    const expected = "Franz Schubert";
+    t.equal(actual, expected, "getComposer");
+  }
 
   t.end();
 });
